@@ -7,6 +7,7 @@ import images from '../Img/index';  // Importando todas as imagens do índice
 import { useNavigate } from 'react-router-dom'; // Importando o useNavigate
 
 function Body() {
+
   const navigate = useNavigate(); // Cria uma instância do hook useNavigate
 
   const handleLoginClick = () => {
@@ -73,7 +74,7 @@ function Body() {
                 <img src={images.boxImage1} alt="Imagem 1" /> {/* Imagem 1 */}
               </BoxImage>
               <BoxText>
-                <BoxTitle>Título 1</BoxTitle>
+                <BoxTitle>Reflorestamento</BoxTitle>
                 <BoxDescription>
                   Parceiros do GreenPeace, estamos trabalhando no reflorestamento de matas queimadas, temos vagas para trabalho voluntário no
                   Alaska, Texas e Flórida, para mais informações entre em contato.
@@ -86,7 +87,7 @@ function Body() {
                 <img src={images.boxImage2} alt="Imagem 2" /> {/* Imagem 2 */}
               </BoxImage>
               <BoxText>
-                <BoxTitle>Maldivas</BoxTitle>
+                <BoxTitle>Praia Limpa</BoxTitle>
                 <BoxDescription>
                   Somos uma casa de hospedagem nas Maldivas, oferecendo uma estadia de 7 dias por R$50 por dia, em troca de trabalho voluntário de 4 horas por dia na limpeza de praias.
                 </BoxDescription>
@@ -98,7 +99,7 @@ function Body() {
                 <img src={images.boxImage3} alt="Imagem 3" /> {/* Imagem 3 */}
               </BoxImage>
               <BoxText>
-                <BoxTitle>Título 3</BoxTitle>
+                <BoxTitle>Sem Fome</BoxTitle>
                 <BoxDescription>
                   Somos uma instituição no Egito que combate a fome e buscamos voluntários para trabalhar com crianças por 14 dias. Estadia grátis, com 7 dias de folga.
                 </BoxDescription>
