@@ -1,25 +1,22 @@
-import { useNavigate } from 'react-router-dom'; // Importando o hook useNavigate
+import { useNavigate } from 'react-router-dom'; 
+import images from '../Img/index';
 import {
-  Container, Header, BioContainer, BioTitle, BioParagraph, BioImage,
-  BackButton, Footer, FooterContent, FooterSection, FooterTitle, FooterText, FooterLinks, FooterLink, FooterBottom
-} from './style'; // Importe os componentes de estilo que você criou
+  Container, Header, BioContainer, BioTitle, BioParagraph, LogoImg
+} from './style'; 
 
 const Biography = () => {
-  const navigate = useNavigate(); // Cria uma instância do hook useNavigate
-
-  const handleBackClick = () => {
-    navigate('/'); // Navega de volta para a página principal
-  };
+  const navigate = useNavigate(); 
 
   return (
     <Container>
       <Header>
-        <h1>Quem Somos</h1>
-        <BackButton onClick={handleBackClick}>Voltar</BackButton>
+        <LogoImg>
+          <img src={images.logo} alt="Imagem do logo" />
+        </LogoImg>
+        <h1>GreenScapes</h1>
       </Header>
       <BioContainer>
         <BioTitle>Nossa História</BioTitle>
-        
         <BioParagraph>
           Nós somos uma organização dedicada a promover o turismo sustentável e o voluntariado
           em comunidades ao redor do mundo. Nossa missão é conectar pessoas a experiências
@@ -30,48 +27,45 @@ const Biography = () => {
           naturais e o desenvolvimento social, sempre em parceria com as comunidades locais.
           Junte-se a nós e faça parte dessa mudança positiva!
         </BioParagraph>
-      </BioContainer>
 
-      {/* Footer */}
-      <Footer>
-        <FooterContent>
-          <FooterSection>
-            <FooterTitle>Política de Doação</FooterTitle>
-            <FooterText>
-              Saiba como suas doações são usadas para promover o voluntariado e apoiar comunidades ao redor do mundo. Transparência é a nossa prioridade.
-            </FooterText>
-          </FooterSection>
-          <FooterSection>
-            <FooterTitle>Relatórios Anuais</FooterTitle>
-            <FooterText>
-              Acesse nossos relatórios anuais e veja o impacto que nossas iniciativas de voluntariado têm gerado globalmente.
-            </FooterText>
-          </FooterSection>
-          <FooterSection>
-            <FooterTitle>Política de Comunidade</FooterTitle>
-            <FooterText>
-              Nossos voluntários seguem um código de conduta que promove respeito e colaboração em todas as nossas atividades.
-            </FooterText>
-          </FooterSection>
-          <FooterSection>
-            <FooterTitle>Contato</FooterTitle>
-            <FooterText>Email: contato@nossaorg.com</FooterText>
-            <FooterText>Telefone: +55 (11) 1234-5678</FooterText>
-            <FooterText>Endereço: Av. Exemplo, 123, São Paulo, SP</FooterText>
-          </FooterSection>
-          <FooterSection>
-            <FooterTitle>Siga-nos</FooterTitle>
-            <FooterLinks>
-              <FooterLink href="#">Facebook</FooterLink>
-              <FooterLink href="#">Instagram</FooterLink>
-              <FooterLink href="#">Twitter</FooterLink>
-            </FooterLinks>
-          </FooterSection>
-        </FooterContent>
-        <FooterBottom>
-          <FooterText>© 2024 Nossa Organização. Todos os direitos reservados.</FooterText>
-        </FooterBottom>
-      </Footer>
+        {/* Seção de Missão e Visão */}
+        <BioTitle>Missão e Visão</BioTitle>
+        <BioParagraph>
+          Nossa missão é promover práticas sustentáveis no turismo e incentivar o voluntariado, 
+          promovendo mudanças positivas nas comunidades que atendemos. 
+        </BioParagraph>
+        <BioParagraph>
+          Nossa visão é um mundo onde o turismo e o voluntariado andam de mãos dadas, 
+          contribuindo para a preservação do meio ambiente e o bem-estar das comunidades locais.
+        </BioParagraph>
+
+        {/* Projetos em Destaque */}
+        <BioTitle>Projetos em Destaque</BioTitle>
+        <BioParagraph>
+          <strong>Reflorestamento na Amazônia:</strong> Colaboramos com comunidades locais para restaurar áreas desmatadas.
+        </BioParagraph>
+        <BioParagraph>
+          <strong>Limpeza das Praias:</strong> Organizamos mutirões de limpeza nas praias para proteger a vida marinha.
+        </BioParagraph>
+
+        {/* Depoimentos de Voluntários */}
+        <BioTitle>Depoimentos de Voluntários</BioTitle>
+        <BioParagraph>
+          "Trabalhar com a GreenScapes foi uma experiência transformadora. 
+          Senti que fiz a diferença e aprendi muito sobre conservação!" - <em>Maria S.</em>
+        </BioParagraph>
+        <BioParagraph>
+          "A oportunidade de voluntariar e viajar ao mesmo tempo foi incrível. 
+          Recomendo a todos!" - <em>João P.</em>
+        </BioParagraph>
+
+        {/* Como Participar */}
+        <BioTitle>Como Participar</BioTitle>
+        <BioParagraph>
+          Se você deseja se juntar a nós em nossa missão, considere fazer uma doação, se inscrever como voluntário, 
+          ou participar de nossos eventos. Sua ajuda faz toda a diferença!
+        </BioParagraph>
+      </BioContainer>
     </Container>
   );
 };
