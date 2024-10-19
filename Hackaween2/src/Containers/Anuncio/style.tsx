@@ -5,7 +5,7 @@ export const Container = styled.div`
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  max-width: 100%; /* Ajustado para ocupar toda a largura disponível */
+  max-width: 900px; /* Aumentar a largura máxima para ocupar mais espaço */
   margin: 20px auto;
 `;
 
@@ -29,31 +29,24 @@ export const LogoImg = styled.div`
   }
 `;
 
-// Estilo do container das boxes
 export const BoxContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
+  justify-content: space-between; /* Distribui as boxes igualmente */
+  margin-bottom: 30px; /* Aumentar espaçamento entre fileiras de boxes */
+  flex-wrap: wrap; /* Permite que as boxes quebrem para a próxima linha se não houver espaço suficiente */
 `;
 
-// Estilo de cada box
 export const Box = styled.div`
+  display: flex;
+  flex-direction: column; /* Dispor o conteúdo verticalmente */
+  justify-content: space-between; /* Garante que o botão fique no final */
   flex: 1;
-  max-width: calc(33.333% - 20px); /* Três boxes por linha com espaçamento */
-  margin: 10px;
+  max-width: calc(30% - 20px);
+  margin: 15px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-
-  @media (max-width: 768px) {
-    max-width: calc(50% - 20px); /* Em telas menores, duas boxes por linha */
-  }
-
-  @media (max-width: 480px) {
-    max-width: 100%; /* Em telas muito pequenas, uma box por linha */
-  }
 `;
 
 // Estilo da imagem da box
@@ -64,15 +57,14 @@ export const BoxImage = styled.div`
   }
 `;
 
-// Estilo do texto da box
 export const BoxText = styled.div`
-  margin-top: 10px;
+  padding: 10px;
 `;
 
-// Estilo do título da box
 export const BoxTitle = styled.h3`
   font-size: 1.5rem;
   color: #333;
+  margin: 0;  /* Remove margens adicionais para melhor alinhamento */
 `;
 
 // Estilo da descrição da box
@@ -81,7 +73,13 @@ export const BoxDescription = styled.p`
   color: #666;
 `;
 
-// Estilo do botão de contato
+export const BoxHeader = styled.div`
+  display: flex;
+  justify-content: space-between;  /* Coloca o título à esquerda e o botão à direita */
+  align-items: center;             /* Alinha o título e o botão verticalmente no centro */
+  margin-bottom: 10px;             /* Espaço entre o cabeçalho e a descrição */
+`;
+
 export const ContactButton = styled.button`
   background-color: #266041;
   color: white;
@@ -89,10 +87,9 @@ export const ContactButton = styled.button`
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: #218838;
   }
 `;
 

@@ -1,11 +1,20 @@
 import images from '../Img/index'; // Importar as imagens
 import {
-  Container, Header, LogoImg, BoxContainer, Box, BoxImage, BoxText, BoxTitle, BoxDescription, ContactButton, RegisterButton
+  Container,
+  Header,
+  LogoImg,
+  BoxContainer,
+  Box,
+  BoxImage,
+  BoxText,
+  BoxTitle,
+  BoxDescription,
+  ContactButton,
+  RegisterButton,
 } from './style'; // Importar os estilos
 import { useNavigate } from 'react-router-dom'; // Importando o useNavigate
 
 const Anuncio = () => {
-
   const navigate = useNavigate(); // Cria uma instância do hook useNavigate
 
   const handleRegisterAnuncioClick = () => {
@@ -33,7 +42,9 @@ const Anuncio = () => {
             <BoxDescription>
               Parceiros do GreenPeace, estamos trabalhando no reflorestamento de matas queimadas, temos vagas para trabalho voluntário no Alaska, Texas e Flórida, para mais informações entre em contato.
             </BoxDescription>
-            <ContactButton>Entre em Contato</ContactButton>
+            <div>
+              <ContactButton>Entre em Contato</ContactButton>
+            </div>
           </BoxText>
         </Box>
         <Box>
@@ -45,7 +56,9 @@ const Anuncio = () => {
             <BoxDescription>
               Somos uma casa de hospedagem nas Maldivas, oferecendo uma estadia de 7 dias por R$50 por dia, em troca de trabalho voluntário de 4 horas por dia na limpeza de praias.
             </BoxDescription>
-            <ContactButton>Entre em Contato</ContactButton>
+            <div>
+              <ContactButton>Entre em Contato</ContactButton>
+            </div>
           </BoxText>
         </Box>
         <Box>
@@ -57,11 +70,12 @@ const Anuncio = () => {
             <BoxDescription>
               Somos uma instituição no Egito que combate a fome e buscamos voluntários para trabalhar com crianças por 14 dias. Estadia grátis, com 7 dias de folga.
             </BoxDescription>
-            <ContactButton>Entre em Contato</ContactButton>
+            <div>
+              <ContactButton>Entre em Contato</ContactButton>
+            </div>
           </BoxText>
         </Box>
       </BoxContainer>
-
       {/* Segunda fileira de boxes */}
       <BoxContainer>
         <Box>
@@ -73,7 +87,10 @@ const Anuncio = () => {
             <BoxDescription>
               Parceiros do GreenPeace, estamos trabalhando no reflorestamento de matas queimadas, temos vagas para trabalho voluntário no Alaska, Texas e Flórida, para mais informações entre em contato.
             </BoxDescription>
-            <ContactButton>Entre em Contato</ContactButton>
+            {/* Adicionando a div para o botão */}
+            <div>
+              <ContactButton>Entre em Contato</ContactButton>
+            </div>
           </BoxText>
         </Box>
         <Box>
@@ -85,7 +102,10 @@ const Anuncio = () => {
             <BoxDescription>
               Somos uma casa de hospedagem nas Maldivas, oferecendo uma estadia de 7 dias por R$50 por dia, em troca de trabalho voluntário de 4 horas por dia na limpeza de praias.
             </BoxDescription>
-            <ContactButton>Entre em Contato</ContactButton>
+            {/* Adicionando a div para o botão */}
+            <div>
+              <ContactButton>Entre em Contato</ContactButton>
+            </div>
           </BoxText>
         </Box>
         <Box>
@@ -97,7 +117,10 @@ const Anuncio = () => {
             <BoxDescription>
               Somos uma instituição no Egito que combate a fome e buscamos voluntários para trabalhar com crianças por 14 dias. Estadia grátis, com 7 dias de folga.
             </BoxDescription>
-            <ContactButton>Entre em Contato</ContactButton>
+            {/* Adicionando a div para o botão */}
+            <div>
+              <ContactButton>Entre em Contato</ContactButton>
+            </div>
           </BoxText>
         </Box>
       </BoxContainer>
@@ -113,7 +136,10 @@ const Anuncio = () => {
             <BoxDescription>
               Parceiros do GreenPeace, estamos trabalhando no reflorestamento de matas queimadas, temos vagas para trabalho voluntário no Alaska, Texas e Flórida, para mais informações entre em contato.
             </BoxDescription>
-            <ContactButton>Entre em Contato</ContactButton>
+            {/* Adicionando a div para o botão */}
+            <div>
+              <ContactButton>Entre em Contato</ContactButton>
+            </div>
           </BoxText>
         </Box>
         <Box>
@@ -125,7 +151,10 @@ const Anuncio = () => {
             <BoxDescription>
               Somos uma casa de hospedagem nas Maldivas, oferecendo uma estadia de 7 dias por R$50 por dia, em troca de trabalho voluntário de 4 horas por dia na limpeza de praias.
             </BoxDescription>
-            <ContactButton>Entre em Contato</ContactButton>
+            {/* Adicionando a div para o botão */}
+            <div>
+              <ContactButton>Entre em Contato</ContactButton>
+            </div>
           </BoxText>
         </Box>
         <Box>
@@ -137,7 +166,10 @@ const Anuncio = () => {
             <BoxDescription>
               Somos uma instituição no Egito que combate a fome e buscamos voluntários para trabalhar com crianças por 14 dias. Estadia grátis, com 7 dias de folga.
             </BoxDescription>
-            <ContactButton>Entre em Contato</ContactButton>
+            {/* Adicionando a div para o botão */}
+            <div>
+              <ContactButton>Entre em Contato</ContactButton>
+            </div>
           </BoxText>
         </Box>
       </BoxContainer>
