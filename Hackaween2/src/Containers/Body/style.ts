@@ -83,9 +83,10 @@ export const Paragraph = styled.p`
 `;
 
 export const Divider = styled.div`
-  height: 1px; /* Altura da linha */
-  background-color: #000; /* Cor da linha */
-  margin: 20px 0; /* Margens superior e inferior */
+  width: 50%; /* Ajuste conforme necessário */
+  height: 1px; /* Espessura da linha */
+  background-color: black; /* Cor da linha */
+  margin: 20px auto; /* Centraliza a linha horizontalmente */
 `;
 
 export const BoxContainer = styled.div`

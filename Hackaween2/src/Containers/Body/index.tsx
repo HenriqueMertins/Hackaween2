@@ -13,14 +13,18 @@ function Body() {
     navigate('/login'); // Redireciona para a página de login
   };
 
+  const handleBioClick = () => {
+    navigate('/biography'); // Redireciona para a página de biografia
+  };
+
   return (
     <Container>
       <Header>
         <LogoImg>
-          <img src={images.logo} alt="Imagem do logo" />  {/* Corrigido o alt */}
+          <img src={images.logo} alt="Imagem do logo" />
         </LogoImg>
         <h1>GreenScapes</h1>
-        <LoginButton onClick={handleLoginClick}>Login</LoginButton>  {/* Adiciona o evento de clique */}
+        <LoginButton onClick={handleLoginClick}>Login</LoginButton>
       </Header>
       <div style={{ display: 'flex', width: '100%', padding: '40px 20px' }}>
         <ImageContainer style={{ marginTop: '20px' }}>
@@ -33,12 +37,13 @@ function Body() {
           <Paragraph>
             Somos uma plataforma que conecta você a experiências únicas de turismo sustentável. Trabalhe em projetos que fazem a diferença enquanto explora novos destinos e aprende sobre as culturas locais. Junte-se a nós e faça parte dessa mudança!
           </Paragraph>
-          <BioButton onClick={() => window.location.href = '/biografia'}>
-            Quem somos
-          </BioButton>
+          <BioButton onClick={handleBioClick}>Quem somos</BioButton> {/* Navegação para a biografia */}
         </TextContainer>
       </div>
-      <Divider />
+
+      <div style={{ padding: '1px 0', textAlign: 'center' }}>
+        <Divider />
+      </div>
 
       <div style={{ position: 'relative', padding: '20px 10%' }}>
         {/* Título dos Destaques */}
@@ -149,7 +154,7 @@ function Body() {
           <FooterSection>
             <FooterTitle>Contato</FooterTitle>
             <FooterText>Email: contato@nossaorg.com</FooterText>
-            <FooterText>Telefone: +55 (11) 1234-5678</FooterText>
+            <FooterText>Telefone: +55 5391234-5678</FooterText>
             <FooterText>Endereço: Av. Exemplo, 123, São Paulo, SP</FooterText>
           </FooterSection>
           <FooterSection>
