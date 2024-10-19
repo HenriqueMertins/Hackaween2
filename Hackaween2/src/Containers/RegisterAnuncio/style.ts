@@ -1,87 +1,93 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 20px auto;
-`;
-
-// Estilo do cabeçalho
-export const Header = styled.header`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-bottom: 30px;
-  h1 {
-    font-size: 2.5rem; /* Tamanho do título */
-    color: #333; /* Cor do título */
-    margin-left: 10px; /* Espaçamento entre logo e título */
-  }
+  justify-content: center;
+  height: 100vh;
+  background-color: #fffff;
 `;
 
-// Estilo da imagem do logo
-export const LogoImg = styled.div`
-  img {
-    width: 100px; /* Largura do logo */
-    height: auto; /* Mantém a proporção da imagem */
-  }
+export const Title = styled.h1`
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #d4c8b3;
 `;
 
-// Estilo do container das boxes
-export const BoxContainer = styled.div`
+export const Form = styled.form`
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px; // Espaçamento entre fileiras
+  flex-direction: column;
+  width: 300px;
 `;
 
-// Estilo da box
-export const Box = styled.div`
-  flex: 1; // Cada box ocupa o mesmo espaço
-  margin: 0 10px; // Margem lateral entre as boxes
-  background-color: #fff; // Cor de fundo das boxes
-  border-radius: 8px; // Bordas arredondadas
-  padding: 15px; // Espaçamento interno
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); // Sombra
+export const Input = styled.input`
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+`;
+export const TextArea = styled.input`
+ padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+`
+
+export const Select = styled.select`
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
 `;
 
-// Estilo da imagem da box
-export const BoxImage = styled.div`
-  img {
-    width: 100%; // Imagem ocupa toda a largura
-    height: auto; // Mantém a proporção
-  }
-`;
-
-// Estilo do texto da box
-export const BoxText = styled.div`
-  margin-top: 10px; // Espaçamento acima do texto
-`;
-
-// Estilo do título da box
-export const BoxTitle = styled.h3`
-  font-size: 1.5rem; // Tamanho do título
-  color: #333; // Cor do título
-`;
-
-// Estilo da descrição da box
-export const BoxDescription = styled.p`
-  font-size: 1rem; // Tamanho da descrição
-  color: #666; // Cor da descrição
-`;
-
-// Estilo do botão de contato
-export const ContactButton = styled.button`
-  background-color: #007bff; // Cor de fundo do botão
-  color: white; // Cor do texto
-  border: none; // Sem borda
-  padding: 10px 15px; // Espaçamento interno
-  border-radius: 5px; // Bordas arredondadas
-  cursor: pointer; // Cursor de ponteiro
-  margin-top: 10px; // Espaçamento acima do botão
+export const Button = styled.button`
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #d4c8b3;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
 
   &:hover {
-    background-color: #0056b3; // Cor do botão ao passar o mouse
+    background-color: #555;
   }
+`;
+
+export const ErrorMessage = styled.p`
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  text-align: center;
+`;
+export const LogoImg = styled.div`
+  img {
+    width: 100%; /* Largura ajustada */
+    max-width: 300px;
+    margin-bottom: -70px;
+    height: auto;
+    border-radius: 10px;
+  }
+`;
+
+export const CheckboxContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+`;
+
+export const CheckboxLabel = styled.label`
+  margin-left: 4px; /* Espaço mínimo entre a caixa e o texto */
+  font-size: 1rem;
+  color: #333;
+`;
+
+export const CheckboxInput = styled.input`
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 `;
