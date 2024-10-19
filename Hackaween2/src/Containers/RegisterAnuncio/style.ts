@@ -85,20 +85,3 @@ export const ContactButton = styled.button`
     background-color: #0056b3; // Cor do botão ao passar o mouse
   }
 `;
-
-// Estilo do botão de registro
-export const RegisterButton = styled.button`
-  background-color: #28a745; // Cor de fundo do botão de registro
-  color: white; // Cor do texto
-  border: none; // Sem borda
-  padding: 10px 15px; // Espaçamento interno
-  border-radius: 5px; // Bordas arredondadas
-  cursor: pointer; // Cursor de ponteiro
-  margin-left: auto; // Margem à esquerda para alinhar à direita
-  margin-top: 10px; // Espaçamento acima do botão
-
-  &:hover {
-    background-color: #218838; // Cor do botão ao passar o mouse
-  }
-`;
-

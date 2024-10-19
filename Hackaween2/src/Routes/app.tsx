@@ -4,6 +4,7 @@ import Login from '../Containers/Login';
 import Register from '../Containers/Register';
 import Biography from '../Containers/Biography';
 import Anuncio from '../Containers/Anuncio';
+import RegisterAnuncio from '../Containers/RegisterAnuncio';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/register" element={<Register />} /> 
         <Route path="/biography" element={<Biography />} /> 
         <Route path="/anuncio" element={<Anuncio />} /> 
+        <Route path="/registerAnuncio" element={<RegisterAnuncio />} /> 
       </Routes>
     </Router>
   );

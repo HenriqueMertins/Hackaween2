@@ -1,32 +1,21 @@
-import images from '../Img/index'; // Importar as imagens
 import {
-  Container, Header, LogoImg, BoxContainer, Box, BoxImage, BoxText, BoxTitle, BoxDescription, ContactButton, RegisterButton
+  Container, Header, LogoImg, BoxContainer, Box, BoxImage, BoxText, BoxTitle, BoxDescription, ContactButton
 } from './style'; // Importar os estilos
-import { useNavigate } from 'react-router-dom'; // Importando o useNavigate
 
-const Anuncio = () => {
-
-  const navigate = useNavigate(); // Cria uma instância do hook useNavigate
-
-  const handleRegisterAnuncioClick = () => {
-    navigate('/registerAnuncio'); // Redireciona para a página de login
-  };
-
+const RegisterAnuncio = () => {
   return (
     <Container>
       <Header>
         <LogoImg>
-          <img src={images.logo} alt="Imagem do logo" />
         </LogoImg>
         <h1>GreenScapes</h1>
-        <RegisterButton onClick={handleRegisterAnuncioClick}>Registrar Anuncio</RegisterButton> {/* Botão de Registro */}
       </Header>
 
       {/* Primeira fileira de boxes */}
       <BoxContainer>
         <Box>
           <BoxImage>
-            <img src={images.boxImage1} alt="Imagem 1" /> {/* Imagem 1 */}
+
           </BoxImage>
           <BoxText>
             <BoxTitle>Reflorestamento</BoxTitle>
@@ -38,7 +27,6 @@ const Anuncio = () => {
         </Box>
         <Box>
           <BoxImage>
-            <img src={images.boxImage2} alt="Imagem 2" /> {/* Imagem 2 */}
           </BoxImage>
           <BoxText>
             <BoxTitle>Praia Limpa</BoxTitle>
@@ -50,7 +38,6 @@ const Anuncio = () => {
         </Box>
         <Box>
           <BoxImage>
-            <img src={images.boxImage3} alt="Imagem 3" /> {/* Imagem 3 */}
           </BoxImage>
           <BoxText>
             <BoxTitle>Sem Fome</BoxTitle>
@@ -66,7 +53,7 @@ const Anuncio = () => {
       <BoxContainer>
         <Box>
           <BoxImage>
-            <img src={images.boxImage1} alt="Imagem 1" /> {/* Imagem 1 */}
+
           </BoxImage>
           <BoxText>
             <BoxTitle>Reflorestamento</BoxTitle>
@@ -78,7 +65,6 @@ const Anuncio = () => {
         </Box>
         <Box>
           <BoxImage>
-            <img src={images.boxImage2} alt="Imagem 2" /> {/* Imagem 2 */}
           </BoxImage>
           <BoxText>
             <BoxTitle>Praia Limpa</BoxTitle>
@@ -90,7 +76,6 @@ const Anuncio = () => {
         </Box>
         <Box>
           <BoxImage>
-            <img src={images.boxImage3} alt="Imagem 3" /> {/* Imagem 3 */}
           </BoxImage>
           <BoxText>
             <BoxTitle>Sem Fome</BoxTitle>
@@ -106,7 +91,6 @@ const Anuncio = () => {
       <BoxContainer>
         <Box>
           <BoxImage>
-            <img src={images.boxImage1} alt="Imagem 1" /> {/* Imagem 1 */}
           </BoxImage>
           <BoxText>
             <BoxTitle>Reflorestamento</BoxTitle>
@@ -118,7 +102,7 @@ const Anuncio = () => {
         </Box>
         <Box>
           <BoxImage>
-            <img src={images.boxImage2} alt="Imagem 2" /> {/* Imagem 2 */}
+
           </BoxImage>
           <BoxText>
             <BoxTitle>Praia Limpa</BoxTitle>
@@ -130,7 +114,7 @@ const Anuncio = () => {
         </Box>
         <Box>
           <BoxImage>
-            <img src={images.boxImage3} alt="Imagem 3" /> {/* Imagem 3 */}
+
           </BoxImage>
           <BoxText>
             <BoxTitle>Sem Fome</BoxTitle>
@@ -141,8 +125,9 @@ const Anuncio = () => {
           </BoxText>
         </Box>
       </BoxContainer>
+
     </Container>
   );
 };
 
-export default Anuncio;
+export default RegisterAnuncio;
