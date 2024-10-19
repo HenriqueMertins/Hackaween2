@@ -135,7 +135,7 @@ function Body() {
         </div>
       </div>
 
-      <div style={{ textAlign: 'center', marginTop: '20px' }}>
+      <div style={{ textAlign: 'center', marginTop: '20px', marginBottom: '40px' }}>
         <ContactButton onClick={handleSeeAllClick}>
           Ver Todos os Destaques
         </ContactButton>

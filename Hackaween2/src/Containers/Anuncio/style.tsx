@@ -9,47 +9,22 @@ export const Container = styled.div`
   margin: 20px auto;
 `;
 
+// Estilo do cabeçalho
 export const Header = styled.header`
-  text-align: center;
-  margin-bottom: 20px;
-
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
   h1 {
-    font-size: 24px;
-    color: #266041; /* Cor do título */
+    font-size: 2.5rem; /* Tamanho do título */
+    color: #333; /* Cor do título */
+    margin-left: 10px; /* Espaçamento entre logo e título */
   }
 `;
 
-export const ImageContainer = styled.div`
-  width: 100%;
+// Estilo da imagem do logo
+export const LogoImg = styled.div`
   img {
-    width: 100%;
-    border-radius: 8px;
-  }
-`;
-
-export const Title = styled.h2`
-  font-size: 22px;
-  color: #266041; /* Cor do título do anúncio */
-  margin: 10px 0;
-`;
-
-export const Description = styled.p`
-  font-size: 16px;
-  color: #333;
-  line-height: 1.5;
-  margin: 10px 0 20px;
-`;
-
-export const ContactButton = styled.button`
-  background-color: #266041; /* Cor do botão */
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-
-  &:hover {
-    background-color: #1f4c36; /* Cor do botão ao passar o mouse */
+    width: 100px; /* Largura do logo */
+    height: auto; /* Mantém a proporção da imagem */
   }
 `;
