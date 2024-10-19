@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, Title, Form, Input, Button, ErrorMessage, Select, LogoImg } from './style';
+import { Container, Title, Form, Input, Button, ErrorMessage, Select, LogoImg, CheckboxContainer, CheckboxInput, CheckboxLabel } from './style';
 import images from '../Img/index';  // Importando todas as imagens do índice
 
 import { useNavigate } from 'react-router-dom';
@@ -14,7 +14,9 @@ function Register() {
   const [error, setError] = useState('');
   const [documentType, setDocumentType] = useState('cpf'); //Aqui defino que o cpf
   const [instituicao, setInstituicao] = useState('cpf'); //Aqui defino que o cpf
-  const [foto, setFoto] = useState('')
+  const [showPassword, setShowPassword] = useState(false);
+  const handleCheckboxChange = () => { setShowPassword(!showPassword); };
+
   const navigate = useNavigate();
 
   const handleRegister = (e: React.FormEvent<HTMLFormElement>) => {
@@ -39,37 +41,12 @@ function Register() {
     }
 
     // Adiciona o novo usuário ao localStorage
-    users.push({ email, password, cnpj, cpf, endereco, instituicao, foto });
+    users.push({ email, password, cnpj, cpf, endereco, instituicao });
     localStorage.setItem('users', JSON.stringify(users));
 
     // Redireciona para a tela de login
     setError('');
     navigate('/login');
-
-    if (foto) {
-      localStorage.setItem('foto', foto);
-      console.log('Foto salva no local storage:', foto);
-    }
-  };
-  //Aqui botamos duas opções de radio button 
-  //para indentificar se é pessoa fisica ou juridica
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      const file = e.target.files[0];
-      // Faça algo com o arquivo
-
-
-      if (file) {
-        const reader = new FileReader();
-        reader.onloadend = () => {
-          // Verifique se reader.result não é null
-          if (reader.result) {
-            setFoto(reader.result as string); // Fazendo um type assertion para string
-          }
-        };
-        reader.readAsDataURL(file); // Lê o arquivo como URL base64
-      }
-    }
   };
   return (
     <Container>
@@ -109,20 +86,7 @@ function Register() {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-        <Input
-          type="password"
-          placeholder="Senha"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <Input
-          type="password"
-          placeholder="Confirme a Senha"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          required
-        />
+
         {documentType === 'cpf' && (
           <Input
             type="tel"
@@ -148,13 +112,6 @@ function Register() {
               onChange={(e) => setEndereco(e.target.value)}
               required
             />
-            {/* Campo para selecionar a foto */}
-            <Input
-              type="file"
-              accept=".png, .jpg, .jpeg"
-              onChange={handleFileChange}
-              required
-            />
 
             {/* Combo box para seleção de que tipo de instituição */}
             <Select
@@ -172,8 +129,32 @@ function Register() {
               <option value="Outros">Outros...</option>
             </Select>
           </>
-        )}
 
+        )}
+        <Input
+          type={showPassword ? 'text' : 'password'}
+          placeholder="Senha"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <Input
+          type={showPassword ? 'text' : 'password'}
+          placeholder="Confirme a Senha"
+          value={confirmPassword}
+          onChange={(e) => setConfirmPassword(e.target.value)}
+          required
+        />
+        <div>
+          <CheckboxContainer>
+            <CheckboxInput
+              type="checkbox"
+              checked={showPassword}
+              onChange={handleCheckboxChange}
+            />
+            <CheckboxLabel>Mostrar senha</CheckboxLabel>
+          </CheckboxContainer>
+        </div>
         <Button type="submit">Cadastrar</Button>
         {error && <ErrorMessage>{error}</ErrorMessage>}
 

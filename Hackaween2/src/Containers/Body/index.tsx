@@ -18,6 +18,10 @@ function Body() {
     navigate('/biography'); // Redireciona para a página de biografia
   };
 
+  const handleSeeAllClick = () => {
+    navigate('/anuncio'); // Muda para a tela de todos os destaques
+  };
+
   return (
     <Container>
       <Header>
@@ -129,6 +133,12 @@ function Body() {
           <span style={{ height: '10px', width: '10px', backgroundColor: '#ccc', borderRadius: '50%', margin: '0 5px' }}></span>
           <span style={{ height: '10px', width: '10px', backgroundColor: '#007BFF', borderRadius: '50%', margin: '0 5px' }}></span>
         </div>
+      </div>
+
+      <div style={{ textAlign: 'center', marginTop: '20px' }}>
+        <ContactButton onClick={handleSeeAllClick}>
+          Ver Todos os Destaques
+        </ContactButton>
       </div>
 
       {/* Footer */}

@@ -66,3 +66,21 @@ export const LogoImg = styled.div`
     border-radius: 10px;
   }
 `;
+
+export const CheckboxContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+`;
+
+export const CheckboxLabel = styled.label`
+  margin-left: 4px; /* Espaço mínimo entre a caixa e o texto */
+  font-size: 1rem;
+  color: #333;
+`;
+
+export const CheckboxInput = styled.input`
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+`;
