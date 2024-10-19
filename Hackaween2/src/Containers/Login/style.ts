@@ -19,14 +19,14 @@ export const Container = styled.div`
   align-items: center;
   height: 100vh;
   background-color: #fff; /* Fundo branco */
-  animation: ${slideUp} 1s ease-out; /* Aplicando animação de subida */
+  animation: ${slideUp} 0.3s ease-out; /* Aplicando animação de subida */
 `;
 
 export const Title = styled.h1`
   color: #000; /* Título preto */
   margin-bottom: 20px;
   font-size: 3rem;
-  animation: ${slideUp} 1s ease-out;
+  animation: ${slideUp} 0.3s ease-out;
   animation-delay: 0.2s;
   animation-fill-mode: backwards;
 `;
@@ -36,8 +36,8 @@ export const Form = styled.form`
   flex-direction: column;
   align-items: center;
   width: 300px;
-  animation: ${slideUp} 1s ease-out;
-  animation-delay: 0.4s;
+  animation: ${slideUp} 0.3s ease-out;
+  animation-delay: 0.3s;
   animation-fill-mode: backwards;
 
   /* Adicione um contêiner para os botões */
@@ -63,8 +63,8 @@ export const Input = styled.input`
     color: #666;
   }
 
-  animation: ${slideUp} 1s ease-out;
-  animation-delay: 0.6s;
+  animation: ${slideUp} 0.3s ease-out;
+  animation-delay: 0.2s;
   animation-fill-mode: backwards;
 `;
 
@@ -82,8 +82,8 @@ export const Button = styled.button`
     background-color: #333;
   }
 
-  animation: ${slideUp} 1s ease-out;
-  animation-delay: 0.8s;
+  animation: ${slideUp} 0.3s ease-out;
+  animation-delay: 0.2s;
   animation-fill-mode: backwards;
 `;
 
