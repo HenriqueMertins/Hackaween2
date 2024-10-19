@@ -21,6 +21,10 @@ const Anuncio = () => {
     navigate('/registerAnuncio'); // Redireciona para a página de login
   };
 
+  const handleContactClick = () => {
+    navigate('/contact'); // Muda para a tela de todos os destaques
+  };
+
   return (
     <Container>
       <Header>
@@ -43,7 +47,7 @@ const Anuncio = () => {
               Parceiros do GreenPeace, estamos trabalhando no reflorestamento de matas queimadas, temos vagas para trabalho voluntário no Alaska, Texas e Flórida, para mais informações entre em contato.
             </BoxDescription>
             <div>
-              <ContactButton>Entre em Contato</ContactButton>
+            <ContactButton onClick={handleContactClick}>Entre em Contato</ContactButton>
             </div>
           </BoxText>
         </Box>
@@ -57,7 +61,7 @@ const Anuncio = () => {
               Somos uma casa de hospedagem nas Maldivas, oferecendo uma estadia de 7 dias por R$50 por dia, em troca de trabalho voluntário de 4 horas por dia na limpeza de praias.
             </BoxDescription>
             <div>
-              <ContactButton>Entre em Contato</ContactButton>
+            <ContactButton onClick={handleContactClick}>Entre em Contato</ContactButton>
             </div>
           </BoxText>
         </Box>
@@ -71,7 +75,7 @@ const Anuncio = () => {
               Somos uma instituição no Egito que combate a fome e buscamos voluntários para trabalhar com crianças por 14 dias. Estadia grátis, com 7 dias de folga.
             </BoxDescription>
             <div>
-              <ContactButton>Entre em Contato</ContactButton>
+            <ContactButton onClick={handleContactClick}>Entre em Contato</ContactButton>
             </div>
           </BoxText>
         </Box>
@@ -89,7 +93,7 @@ const Anuncio = () => {
             </BoxDescription>
             {/* Adicionando a div para o botão */}
             <div>
-              <ContactButton>Entre em Contato</ContactButton>
+            <ContactButton onClick={handleContactClick}>Entre em Contato</ContactButton>
             </div>
           </BoxText>
         </Box>
@@ -104,7 +108,7 @@ const Anuncio = () => {
             </BoxDescription>
             {/* Adicionando a div para o botão */}
             <div>
-              <ContactButton>Entre em Contato</ContactButton>
+            <ContactButton onClick={handleContactClick}>Entre em Contato</ContactButton>
             </div>
           </BoxText>
         </Box>
@@ -119,7 +123,7 @@ const Anuncio = () => {
             </BoxDescription>
             {/* Adicionando a div para o botão */}
             <div>
-              <ContactButton>Entre em Contato</ContactButton>
+            <ContactButton onClick={handleContactClick}>Entre em Contato</ContactButton>
             </div>
           </BoxText>
         </Box>
@@ -138,7 +142,7 @@ const Anuncio = () => {
             </BoxDescription>
             {/* Adicionando a div para o botão */}
             <div>
-              <ContactButton>Entre em Contato</ContactButton>
+            <ContactButton onClick={handleContactClick}>Entre em Contato</ContactButton>
             </div>
           </BoxText>
         </Box>
@@ -153,7 +157,7 @@ const Anuncio = () => {
             </BoxDescription>
             {/* Adicionando a div para o botão */}
             <div>
-              <ContactButton>Entre em Contato</ContactButton>
+            <ContactButton onClick={handleContactClick}>Entre em Contato</ContactButton>
             </div>
           </BoxText>
         </Box>
@@ -168,7 +172,7 @@ const Anuncio = () => {
             </BoxDescription>
             {/* Adicionando a div para o botão */}
             <div>
-              <ContactButton>Entre em Contato</ContactButton>
+            <ContactButton onClick={handleContactClick}>Entre em Contato</ContactButton>
             </div>
           </BoxText>
         </Box>

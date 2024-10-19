@@ -5,6 +5,8 @@ import Register from '../Containers/Register';
 import Biography from '../Containers/Biography';
 import Anuncio from '../Containers/Anuncio';
 import RegisterAnuncio from '../Containers/RegisterAnuncio';
+import Contact from '../Containers/Contact';
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         <Route path="/biography" element={<Biography />} /> 
         <Route path="/anuncio" element={<Anuncio />} /> 
         <Route path="/registerAnuncio" element={<RegisterAnuncio />} /> 
+        <Route path="/contact" element={<Contact />} /> 
       </Routes>
     </Router>
   );

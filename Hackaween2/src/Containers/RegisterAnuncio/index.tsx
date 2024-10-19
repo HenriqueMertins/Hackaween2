@@ -102,8 +102,6 @@ function RegisterAnuncio() {
         />
         <TextArea
           type="text"
-          minLength={60}
-          maxLength={240}
           placeholder="Descreva a oferta"
           value={descricao}
           onChange={(e) => setDescricao(e.target.value)}

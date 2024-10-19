@@ -22,6 +22,10 @@ function Body() {
     navigate('/anuncio'); // Muda para a tela de todos os destaques
   };
 
+  const handleContactClick = () => {
+    navigate('/contact'); // Muda para a tela de todos os destaques
+  };
+
   return (
     <Container>
       <Header>
@@ -83,7 +87,7 @@ function Body() {
                   Parceiros do GreenPeace, estamos trabalhando no reflorestamento de matas queimadas, temos vagas para trabalho voluntário no
                   Alaska, Texas e Flórida, para mais informações entre em contato.
                 </BoxDescription>
-                <ContactButton>Entre em Contato</ContactButton>
+                <ContactButton onClick={handleContactClick}>Entre em Contato</ContactButton>
               </BoxText>
             </Box>
             <Box>
@@ -95,7 +99,7 @@ function Body() {
                 <BoxDescription>
                   Somos uma casa de hospedagem nas Maldivas, oferecendo uma estadia de 7 dias por R$50 por dia, em troca de trabalho voluntário de 4 horas por dia na limpeza de praias.
                 </BoxDescription>
-                <ContactButton>Entre em Contato</ContactButton>
+                <ContactButton onClick={handleContactClick}>Entre em Contato</ContactButton>
               </BoxText>
             </Box>
             <Box>
@@ -107,7 +111,7 @@ function Body() {
                 <BoxDescription>
                   Somos uma instituição no Egito que combate a fome e buscamos voluntários para trabalhar com crianças por 14 dias. Estadia grátis, com 7 dias de folga.
                 </BoxDescription>
-                <ContactButton>Entre em Contato</ContactButton>
+                <ContactButton onClick={handleContactClick}>Entre em Contato</ContactButton>
               </BoxText>
             </Box>
           </BoxContainer>
